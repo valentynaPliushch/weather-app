@@ -9,28 +9,71 @@
     <title>Document</title>
 </head>
 <body class="bg-primary-subtle">
-    <div class="my-5 mx-5 p-3 bg-light rounded">
+    <div class="my-5 mx-auto p-3 bg-light rounded" style="width: 740px;">
          <form class="input-group" id="search-form">
             <input type="search" class="form-control" id="search-form-input" placeholder="Enter a city.." aria-describedby="search-input" required>
             <button class="btn btn-primary" type="submit" id="search-input">Search</button>
          </form>
-         <div class="row">
-            <div class="col-8">
-                <h1 id="city">Paris</h1>
+         <div class="row mb-5">
+            <div class="col-7 ms-4">
+                <h1 class="my-4" id="city">Paris</h1>
                 <p class="text-secondary">
                     <span id="time">Wednesday 16:56</span>, <span id="description">overcast clouds </span><br/>
                 Humidity: <span class="text-danger" id="humidity"><strong>76%</strong></span>, Wind: <span class="text-danger" id="wind-speed"><strong>4.63km/h</strong></span>
                 </p>
             </div>
-            <div class="col">
-                <div class="row">
-                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png" alt="current-weather" class="col" id="icon">
-                    <h1 class="col" id="temperature"><strong>14ºC</strong></h1>
+            <div class="col d-flex">
+                <div class="d-flex align-items-center">
+                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png" alt="current-weather" id="icon">
+                    <div class="d-flex align-items-center" >
+                        <h1 id="temperature" style="font-size: 50px;"><strong>14ºC</strong></h1>
+                    </div>
                 </div>
             </div>
          </div>
          <div class="row" id="forecast">
+            <div class="col d-flex flex-column align-items-center">
+                <p class="text-secondary">Wed</p>
+                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png" alt="weather-img">
+                <div>
+                <span class="text-danger"><strong>14º</strong></span>
+                <span class="text-danger">8º</span>
+                </div>  
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <p class="text-secondary">Wed</p>
+                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png" alt="weather-img">
+                <div>
+                <span class="text-danger"><strong>14º</strong></span>
+                <span class="text-danger">8º</span>
+                </div>  
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <p class="text-secondary">Wed</p>
+                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png" alt="weather-img">
+                <div>
+                <span class="text-danger"><strong>14º</strong></span>
+                <span class="text-danger">8º</span>
+                </div>  
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <p class="text-secondary">Wed</p>
+                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png" alt="weather-img">
+                <div>
+                <span class="text-danger"><strong>14º</strong></span>
+                <span class="text-danger">8º</span>
+                </div>  
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <p class="text-secondary">Wed</p>
+                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png" alt="weather-img">
+                <div>
+                <span class="text-danger"><strong>14º</strong></span>
+                <span class="text-danger">8º</span>
+                </div>  
+            </div>
          </div>
+         <p class="mx-auto mt-4 text-center">This project was coded by <a href="#" target="_blank">Valentyna</a>, is open-sourced on <a href="#" target="_blank">GitHub</a> and hosted on <a href="#" target="_blank">Netlify</a></p>
     </div>
 
 

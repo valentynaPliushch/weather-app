@@ -28,13 +28,14 @@ function getTime(timestamp){
 }
 
 function displayForecast (responce){
+    forecast.innerHTML = '';
     const resp = responce.data.daily;
     console.log(responce.data.daily[0].temperature)
     for(let i=0; i < 5; i++){
         let[day] = getTime(resp[i].time);
         const div = document.createElement("div");
 
-        div.className = 'col';
+        div.className = 'col d-flex flex-column align-items-center';
         div.innerHTML = `
         <p class="text-secondary">${day}</p>
         <img src="${resp[i].condition.icon_url}" alt="weather-img">
