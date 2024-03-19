@@ -1,6 +1,6 @@
 # Weather App
 
-This is an app that shows the weather information of any given city. It uses SheCodes service to provide weather information. 
+This is an app that shows the weather information of any given city. It uses SheCodes API to provide weather information. 
 
 ## Usage
 
