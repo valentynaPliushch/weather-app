@@ -30,7 +30,7 @@ function getTime(timestamp){
 function displayForecast (responce){
     forecast.innerHTML = '';
     const resp = responce.data.daily;
-    console.log(responce.data.daily[0].temperature)
+
     for(let i=0; i < 5; i++){
         let[day] = getTime(resp[i].time);
         const div = document.createElement("div");
@@ -51,17 +51,15 @@ function displayForecast (responce){
 
 function proceedData(responce){
     const resp = responce.data;
-    city.innerHTML = responce.data.city;
     let [day, hours, minutes] = getTime(resp.time);
-
-
+    city.innerHTML = responce.data.city;
     timeElement.innerHTML = `${day} ${hours}:${minutes}`;
     description.innerHTML = resp.condition.description;
     humidity.innerHTML = `<strong>${resp.temperature.humidity}%</strong>`;
     windSpeed.innerHTML = `<strong>${resp.wind.speed}km/h</strong>`;
     temperature.innerHTML = `<strong>${Math.round(resp.temperature.current)}%C</strong>`;
     weatherIcon.src = resp.condition.icon_url;
-
+    input.value = ''
 }
 
 form.addEventListener('submit', (e)=>{
@@ -69,7 +67,7 @@ form.addEventListener('submit', (e)=>{
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${input.value}&key=${apiKey}&units=metric`;
     let apiForecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=${input.value}&key=${apiKey}`;
 
-    axios.get(apiUrl).then(proceedData)
+    axios.get(apiUrl).then(proceedData).catch(()=> {city.innerHTML = 'City not found'})
     axios.get(apiForecastUrl).then(displayForecast)
 })
 
