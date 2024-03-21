@@ -66,7 +66,7 @@ function proceedData(responce){
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Oslo&key=${apiKey}&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${input.value}&key=${apiKey}&units=metric`;
     let apiForecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=${input.value}&key=${apiKey}`;
 
     axios.get(apiUrl).then(proceedData)
